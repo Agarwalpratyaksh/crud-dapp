@@ -5,7 +5,7 @@ use anchor_lang::prelude::*;
 declare_id!("ByuZ5GFkWpp9oD9mAen7vJ8WZKcQra7WUcQ1C5bNVVFj");
 
 #[program]
-pub mod counter {
+pub mod crud {
     use super::*;
 
     //create_journal_entry

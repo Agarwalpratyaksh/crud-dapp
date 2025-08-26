@@ -2,7 +2,7 @@
  * Program IDL in camelCase format in order to be used in JS/TS.
  *
  * Note that this is only a type helper and is not the actual IDL. The original
- * IDL can be found at `target/idl/counter.json`.
+ * IDL can be found at `target/idl/crud.json`.
  */
 export type Crud = {
   "address": "ByuZ5GFkWpp9oD9mAen7vJ8WZKcQra7WUcQ1C5bNVVFj",

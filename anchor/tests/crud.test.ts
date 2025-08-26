@@ -12,7 +12,6 @@ describe('counter', () => {
 
   const program = anchor.workspace.Crud as Program<Crud>
 
-  const crudKeypair = Keypair.generate()
 
   const title = 'LOL'
   const message = 'This is my LOL testing profrma'

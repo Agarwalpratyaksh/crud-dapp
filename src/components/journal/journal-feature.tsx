@@ -3,24 +3,24 @@
 import { useWallet } from '@solana/wallet-adapter-react'
 import { WalletButton } from '../solana/solana-provider'
 import { ExplorerLink } from '../cluster/cluster-ui'
-import { useCounterProgram } from './counter-data-access'
-import { CounterCreate, CounterList } from './counter-ui'
+import { usecrudProgram } from './journal-data-access'
+import { CounterCreate, CounterList } from './journal-ui'
 import { AppHero } from '../app-hero'
 import { ellipsify } from '@/lib/utils'
 
 export default function CounterFeature() {
   const { publicKey } = useWallet()
-  const { programId } = useCounterProgram()
+  const { programId } = usecrudProgram()
 
   return publicKey ? (
-    <div>
+    <div className="container mx-auto p-6">
       <AppHero
-        title="Counter"
+        title="Journalling App"
         subtitle={
-          'Create a new account by clicking the "Create" button. The state of a account is stored on-chain and can be manipulated by calling the program\'s methods (increment, decrement, set, and close).'
+          'Enter the Title, Message and then Create, this will create you journal on chain '
         }
       >
-        <p className="mb-6">
+        <p className="text-lg text-gray-600 mb-6 hover:text-gray-400">
           <ExplorerLink path={`account/${programId}`} label={ellipsify(programId.toString())} />
         </p>
         <CounterCreate />
@@ -28,11 +28,9 @@ export default function CounterFeature() {
       <CounterList />
     </div>
   ) : (
-    <div className="max-w-4xl mx-auto">
-      <div className="hero py-[64px]">
-        <div className="hero-content text-center">
-          <WalletButton />
-        </div>
+    <div className="hero bg-gradient-to-r from-blue-500 to-teal-500 p-12 flex items-center justify-center">
+      <div className="text-center text-white">
+        <WalletButton />
       </div>
     </div>
   )

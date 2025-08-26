@@ -4,7 +4,7 @@ This is a Next.js app containing:
 
 - Tailwind CSS setup for styling
 - Useful wallet UI elements setup using [@solana/web3.js](https://www.npmjs.com/package/@solana/web3.js)
-- A basic Counter Solana program written in Anchor
+- A basic Crud Solana program written in Anchor
 - UI components for interacting with the Counter program
 
 ## Getting Started
